@@ -4,7 +4,9 @@ export interface ICharacters {
     description: string,
     image: string,
     apparitions: string[],
-    rate: number
+    avaibleOn: string[],
+    rate: number,
+    position: string,
 };
 
 export interface IHqs {
@@ -13,7 +15,9 @@ export interface IHqs {
     description: string,
     image: string,
     apparitions: string[],
-    rate: number
+    avaibleOn: string[],
+    rate: number,
+    position: string
 };
 
 export interface IMovies {
@@ -22,7 +26,9 @@ export interface IMovies {
     description: string,
     image: string,
     apparitions: string[],
-    rate: number
+    avaibleOn: string[],
+    rate: number,
+    position: string
 };
 
 export type DataContextType = {
