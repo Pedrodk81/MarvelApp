@@ -15,13 +15,13 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
       <DataProvider>
         <App />
       </DataProvider>
     </Provider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 reportWebVitals();

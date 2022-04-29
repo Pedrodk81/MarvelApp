@@ -63,11 +63,11 @@ export default function FormLogin(): ReactElement {
                         </label>
                         <span>Savar login</span>
                     </div>
-                    <a href="#" className="forgot-password">Esquecia a senha</a>
+                    <a className="forgot-password">Esquecia a senha</a>
                 </FormOptions>
                 <ButtonSubmit type="submit">Entrar</ButtonSubmit>
             </Form>
-            <NoAccount> Ainda nao tem o login? <a href="" className="signup">Cadastre-se</a></NoAccount>
+            <NoAccount> Ainda nao tem o login? <a className="signup">Cadastre-se</a></NoAccount>
         </Box>
     )
 }

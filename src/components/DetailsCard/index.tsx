@@ -12,10 +12,10 @@ import closeIcon from "../../assets/close.svg";
 
 import { 
     DetailsCharacters, DetailsMoviesAndHqs, Title, Description, Info, Apparitions, Movies, RateText, Rate, Close, 
-    AvaibleOn, AvaiblesStreaming, CloseMovies
+    AvaibleOn, AvaiblesStreaming
 } from "./styles";
 
-const assetsPath = "/MarvelApp/images/"
+const assetsPath = "/images/"
 
 export default function DetailsCard({data, isCharacterData, onClose }: {data: ICharacters | IMovies | IHqs, isCharacterData?: boolean, onClose: VoidFunction } ): ReactElement {
     const customStyles = {
@@ -50,8 +50,8 @@ function CharactersInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, on
     const negativeRate =Array.from(Array(5 - data.rate).keys());
 
     return (
-        <DetailsCharacters float={data.position == "right"}>
-            {data.position == "left" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
+        <DetailsCharacters float={data.position === "right"}>
+            {data.position === "left" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
             <Info>
                 <Title>
                     {data.title}
@@ -80,7 +80,7 @@ function CharactersInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, on
                 </Rate>
                 <Close src={closeIcon} alt="Fechar" onClick={onClose} characters={true} />
             </Info>
-            {data.position == "right" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
+            {data.position === "right" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
         </DetailsCharacters>
     )
 }
@@ -91,8 +91,8 @@ function MoviesAndHqsInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, 
     const negativeRate =Array.from(Array(5 - data.rate).keys());
     
     return (
-        <DetailsMoviesAndHqs float={data.position == "right"}>
-            {data.position == "left" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
+        <DetailsMoviesAndHqs float={data.position === "right"}>
+            {data.position === "left" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
             <Info>
                 <Title>
                     {data.title}
@@ -119,7 +119,7 @@ function MoviesAndHqsInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, 
                 </Rate>
                 <Close src={closeIcon} alt="Fechar" onClick={onClose} />
             </Info>
-            {data.position == "right" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
+            {data.position === "right" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
         </DetailsMoviesAndHqs>
     )
 }

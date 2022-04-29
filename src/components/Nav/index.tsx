@@ -33,17 +33,17 @@ export default function Nav(): ReactElement {
                         <List>
                             <Item>
                                 <Link to="/characters">
-                                    <span className={pathname == "/characters" ? "active" : ""}>Personagens</span>    
+                                    <span className={pathname === "/characters" ? "active" : ""}>Personagens</span>    
                                 </Link>
                             </Item>
                             <Item>
                                 <Link to="/movies">
-                                    <span className={pathname == "/movies" ? "active" : ""}>Filmes</span>    
+                                    <span className={pathname === "/movies" ? "active" : ""}>Filmes</span>    
                                 </Link>
                             </Item>
                             <Item>
                                 <Link to="/hqs">
-                                    <span className={pathname == "/hqs" ? "active" : ""}>HQs</span>    
+                                    <span className={pathname === "/hqs" ? "active" : ""}>HQs</span>    
                                 </Link>
                             </Item>
                         </List>
@@ -75,17 +75,17 @@ function AsideNav({logout, onClose, pathname}: {logout: VoidFunction, onClose: V
             <List mobile={true}>
                 <Item mobile={true}>
                     <Link to="/characters">
-                        <span className={pathname == "/characters" ? "active" : ""}>Personagens</span>    
+                        <span className={pathname === "/characters" ? "active" : ""}>Personagens</span>    
                     </Link>
                 </Item>
                 <Item  mobile={true}>
                     <Link to="/movies">
-                        <span className={pathname == "/movies" ? "active" : ""}>Filmes</span>    
+                        <span className={pathname === "/movies" ? "active" : ""}>Filmes</span>    
                     </Link>
                 </Item>
                 <Item  mobile={true}>
                     <Link to="/hqs">
-                        <span className={pathname == "/hqs" ? "active" : ""}>HQs</span>    
+                        <span className={pathname === "/hqs" ? "active" : ""}>HQs</span>    
                     </Link>
                 </Item>
             </List>
