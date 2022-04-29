@@ -1,0 +1,201 @@
+:root {
+    --background-color-application: #000000;
+
+    --background-color-nav: #000000;
+
+    --container-lg: 1024px;
+    --container-md: 780px;
+    --container-sm: 320px;
+}
+
+@font-face {
+    font-family: "Marvel";
+    src: local("Marvel"), url("../assets/fonts/MarvelRegular-Dj83.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Axiform";
+    src: local("Axiform"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Bold.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Axiform Light";
+    src: local("Axiform Light"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Light.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Axiform Thin";
+    src: local("Axiform Thin"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Thin.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Axiform Medium";
+    src: local("Axiform Medium"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Medium.otf") format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: var(--background-color-application);
+  background-image: url("../assets/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
+ul {
+   list-style: none;
+   margin: 0; 
+}
+nav {
+    background-color: var(--background-color-nav);
+    height: 114px;
+}
+
+h2, h1, p {
+    margin: 0;
+}
+
+.mv-logo {
+    background-color: #FF0000;
+    width: 237px;
+    height: 95px;
+    padding-top: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    animation: move-logo 5s ease;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    animation: fade-in 5s ease;
+}
+.mv-logo span {
+    color: white;
+    font-family: Marvel;
+    text-transform: uppercase;
+    font-size: 100px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 100%;
+    margin-left: 154px;
+    margin-top: 8%;
+}
+
+.title {
+    font-family: Axiform;
+    color: #FF0000;
+    font-size: 30px;
+    margin-top: 38px;
+    margin-left: 28px;
+}
+.access-account {
+    font-family: Axiform Light;
+    color: #84848D;
+    font-size: 20px;
+    margin-left: 28px;
+}
+input[type="email"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+input[type="email"], input[type="password"] {
+    border: none;
+    border-radius: 100px;
+    width: 383px;
+    height: 73px;
+    padding: 0 28px;
+    font-size: 22px;
+    font-family: Axiform Light;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input::placeholder { 
+    color: #D1D1D6;
+}
+.save-login, .forgot-password {
+    font-family: Axiform Medium;
+    font-size: 15px;
+    color: #84848D;
+}
+.forgot-password {
+    border-bottom: solid 1px #FF0000;
+}
+button[type="submit"] {
+    border: none;
+    border-radius: 33px;
+    font-family: Axiform Medium;
+    font-size: 28px;
+    height: 73px;
+    width: 439px;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    margin: 23px 0px;
+}
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding: 0px 10px;
+}
+.no-account {
+    font-family: Axiform Medium;
+    font-size: 15px;
+    color: #84848D; 
+    align-self: center;
+}
+
+.signup {
+    color: #FF0000;
+}
+
+@keyframes move-logo {
+    0% {
+        top: 30%;
+        left: 140%;
+    }
+    50% {
+        top: 30%;
+        left: 0%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .login {
+        padding: 60px 15px;
+        margin: 0;
+    }
+  }

@@ -1,0 +1,212 @@
+:root {
+    --background-color-application: #000000;
+
+    --background-color-nav: #000000;
+
+    --container-lg: 1024px;
+    --container-md: 780px;
+    --container-sm: 320px;
+
+}
+
+@font-face {
+    font-family: "Marvel";
+    src: local("Marvel"), url("../assets/fonts/MarvelRegular-Dj83.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Axiform";
+    src: local("Axiform"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Bold.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Axiform Light";
+    src: local("Axiform Light"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Light.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Axiform Thin";
+    src: local("Axiform Thin"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Thin.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Axiform Regular";
+    src: local("Axiform Regular"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Regular.otf") format("truetype");
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: var(--background-color-application);
+  background-image: url("../assets/unknown.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
+ul {
+   list-style: none;
+   margin: 0; 
+}
+nav {
+    background-color: var(--background-color-nav);
+    height: 114px;
+}
+
+h2, p {
+    margin: 0;
+}
+
+.container {
+    max-width: var(--container);
+    margin: auto;
+}
+
+.mv-logo {
+    background-color: #FF0000;
+    width: 122px;
+    height: 54px;
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.mv-logo span {
+    color: white;
+    font-family: Marvel;
+    text-transform: uppercase;
+    font-size: 52px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-items li{
+    font-family: Axiform;
+    color: #84848D;
+    font-size: 30px;
+    transition: color 0.1s ease-in;
+    margin-right: 85px;
+    cursor: pointer;
+}
+.nav-login span {
+    font-family: Axiform Light;
+    color: #84848D;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-items li.active, .nav-items li:hover, .nav-login span:hover{
+    color: #ffffff;
+}
+
+.row-navbar, .right-info, .nav-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 114px;
+}
+
+section {
+    margin-top: 145px;
+}
+
+.details-right, .details-movies {
+    max-width: 660px;
+    max-height: 439px;
+    background: linear-gradient(to right, #FF0000, #400E0E);
+    border-radius: 30px;
+}
+
+.details-right, .details-movies {
+    display: flex;
+}
+
+.info {
+    padding: 70px 45px 25px;
+}
+.details-movies .info {
+    padding: 60px 45px 25px;
+}
+.info .title {
+    font-family: "Axiform";
+    font-size: 30px;
+    color:#fff;
+}
+
+
+.info .apparitions {
+    font-family: "Axiform";
+    font-size: 20px;
+    color:#fff;
+    text-align: left;
+}
+
+.info .movies {
+    font-family: "Axiform Thin";
+    font-size: 18px;
+    color:#fff;
+    text-align: left;
+}
+
+.info .rate-text {
+    font-family: "Axiform Regular";
+    font-size: 26px;
+    color:#fff;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.info .rate {
+    display: flex;
+}
+
+.info .rate > * {
+    margin-top: 5px;
+    margin-right: 8px;
+}
+
+.info .close {
+    cursor: pointer;
+    position: relative;
+    left: 90%;
+    top: 5%;
+}
+
+.description-movies, .avaible-on {
+    font-family: "Axiform Thin";
+    font-size: 12px;
+    color:#fff;
+    text-align: left;
+}
+
+.avaible-on {
+    margin-top: 5px;
+}
+
+.avaibles-streaming {
+    background-color: #fff;
+    height: 47px;
+    width: 49px;
+    border-radius: 9px;
+    margin-top: 5px;
+}
+
+.close-movies {
+    cursor: pointer;
+    position: relative;
+    right: 100%;
+}

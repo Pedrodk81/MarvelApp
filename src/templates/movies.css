@@ -1,0 +1,164 @@
+:root {
+    --background-color-application: #000000;
+
+    --background-color-nav: #000000;
+
+    --container-lg: 1024px;
+    --container-md: 780px;
+    --container-sm: 320px;
+
+}
+
+@font-face {
+    font-family: "Marvel";
+    src: local("Marvel"), url("../assets/fonts/MarvelRegular-Dj83.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Axiform";
+    src: local("Axiform"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Bold.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Axiform Light";
+    src: local("Axiform Light"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Light.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Axiform Thin";
+    src: local("Axiform Thin"), url("../assets/fonts/Kastelov\ -\ Axiforma\ Thin.otf") format("truetype");
+    font-weight: bold;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: var(--background-color-application);
+  background-image: url("../assets/unknown.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
+ul {
+   list-style: none;
+   margin: 0; 
+}
+nav {
+    background-color: var(--background-color-nav);
+    height: 114px;
+}
+
+h2, p {
+    margin: 0;
+}
+
+.container {
+    max-width: var(--container-lg);
+    margin: auto;
+}
+
+.mv-logo {
+    background-color: #FF0000;
+    width: 122px;
+    height: 54px;
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.mv-logo span {
+    color: white;
+    font-family: Marvel;
+    text-transform: uppercase;
+    font-size: 52px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-items li{
+    font-family: Axiform;
+    color: #84848D;
+    font-size: 30px;
+    transition: color 0.1s ease-in;
+    margin-right: 85px;
+    cursor: pointer;
+}
+.nav-login span {
+    font-family: Axiform Light;
+    color: #84848D;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-items li.active, .nav-items li:hover, .nav-login span:hover{
+    color: #ffffff;
+}
+
+.row-navbar, .right-info, .nav-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 114px;
+}
+
+section {
+    margin-top: 145px;
+}
+
+
+.card {
+    max-width: 290px;
+    height: 439px;
+    margin-right: 77px;
+    background-image: url("../assets/wanda.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.info {
+    max-height: 234px;
+    background-color: linear;
+    border-radius: 30px;    
+    text-align: center;
+    align-self: flex-end;
+    padding: 28px 23px 16px;
+    background: linear-gradient(rgb(255, 0 , 0), rgba(64, 14 , 14, 0.5));
+}
+
+.info .title {
+    font-family: "Axiform";
+    font-size: 20px;
+    color:#fff;
+}
+
+.info .description {
+    font-family: "Axiform Thin";
+    font-size: 12px;
+    color:#fff;
+    text-align: left;
+    height: 123px;
+
+}
+
+.info .details {
+    font-family: "Axiform Thin";
+    font-size: 20px;
+    color:#fff;
+}
+.info > * {
+    margin-bottom: 5px;
+}
