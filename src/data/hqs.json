@@ -4,7 +4,7 @@
         "title":"Thor Vikings",
         "description":"Garth Ennis e sua violência atacam novamente na HQ que leva a violência das histórias de Thor ao limite! Na minissérie de 2003 vemos vikings de um passado distante voltando a vida.",
         "image":"hq-thor",
-        "avaibleOn": ["Disney"],
+        "avaibleOn": ["americanas", "amazon"],
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
         "rate": 3,
         "position": "left"
@@ -14,7 +14,7 @@
         "title":"Surfista Prateado",
         "description":"O único oponente do Devorador de Mundos é o herói que ele aprisionou na Terra: o Surfista Prateado, Galactus jurou não consumir o planeta, mas e se, em vez disso, ele transformar a civilização em seus adoradores?",
         "image":"hq-silver-surf",
-        "avaibleOn": ["Disney"],
+        "avaibleOn": ["americanas", "amazon"],
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
         "rate": 2,
         "position": "right"
@@ -24,7 +24,7 @@
         "title":"Wolverine: Origens",
         "description":"Origem é uma mini série em quadrinhos publicada pela Marvel Comics em seis edições, entre 2001 e 2002. A história conta a revelação do passado do personagem Wolverine. ",
         "image":"hq-wolverine-origin",
-        "avaibleOn": ["Disney"],
+        "avaibleOn": ["americanas", "amazon"],
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
         "rate": 1,
         "position": "left"   
@@ -34,7 +34,7 @@
         "title":"Thor Vikings",
         "description":"Garth Ennis e sua violência atacam novamente na HQ que leva a violência das histórias de Thor ao limite! Na minissérie de 2003 vemos vikings de um passado distante voltando a vida.",
         "image":"hq-thor",
-        "avaibleOn": ["Disney"],
+        "avaibleOn": ["americanas", "amazon"],
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
         "rate": 3,
         "position": "right"

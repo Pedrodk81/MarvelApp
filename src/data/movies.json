@@ -24,7 +24,7 @@
         "title":"Thor",
         "image":"movie-thor",
         "description":"Quando é banido do reino de Asgard e exilado na Terra, o arrogante guerreiro Thor (Chris Hemsworth) é obrigado a lutar para reaver seus poderes perdidos.",
-        "avaibleOn": ["disney", "americanas", "amazon"],
+        "avaibleOn": ["disney"],
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
         "rate": 1,
         "position": "right"
