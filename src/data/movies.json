@@ -4,39 +4,59 @@
         "title":"Homem de Ferro",
         "image":"movie-iron-man",
         "description":"Tony Stark (Robert Downey Jr.) é um industrial bilionário, que também é um brilhante inventor, ao ser sequestrado, ele é obrigado a construir uma arma devastadora, mas ao invés disso, cria uma armadura capaz de mudar a história.",
+        "avaibleOn": ["disney"],
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 4   
+        "rate": 4,
+        "position": "left"
     },
     {
         "id": 2,
         "title":"Homem de ferro 2",
         "image":"movie-iron-man-2",
         "description": "O mundo já sabe que o inventor bilionário Tony Stark (Robert Downey Jr.) é o super-herói blindado Homem de Ferro. Sofrendo pressão do governo, da mídia e do público para compartilhar sua tecnologia com as forças armadas.",
+        "avaibleOn": ["disney"],
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 2
+        "rate": 2,
+        "position": "left"
     },
     {
         "id": 3,
         "title":"Thor",
         "image":"movie-thor",
         "description":"Quando é banido do reino de Asgard e exilado na Terra, o arrogante guerreiro Thor (Chris Hemsworth) é obrigado a lutar para reaver seus poderes perdidos.",
+        "avaibleOn": ["disney", "americanas", "amazon"],
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 1
+        "rate": 1,
+        "position": "right"
     },
     {
         "id": 4,
-        "title":"Capitão América",
+        "title":"Capitão América: Primeiro Vingador",
         "image":"movie-captain-america",
         "description":"Steve Rogers é um jovem que participa de experiências visando a criação do supersoldado americano. Quando os oficiais militares conseguem transformá-lo em uma arma humana, eles percebem que não podem arriscar a vida do jovem nas batalhas de guerra.",
+        "avaibleOn": ["disney"],
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 5
+        "rate": 5,
+        "position": "left"
     },
     {
         "id": 5,
         "title":"Captain Marvel",
         "image":"movie-captain-marvel",
         "description":"Capitã Marvel, parte do exército de elite dos Kree, uma raça alienígena, encontra-se no meio de uma batalha entre seu povo e os Skrulls.",
+        "avaibleOn": ["disney"],
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 4
+        "rate": 4,
+        "position": "left"
+    },
+    {
+        "id": 1,
+        "title":"Homem de Ferro",
+        "image":"movie-iron-man",
+        "description":"Tony Stark (Robert Downey Jr.) é um industrial bilionário, que também é um brilhante inventor, ao ser sequestrado, ele é obrigado a construir uma arma devastadora, mas ao invés disso, cria uma armadura capaz de mudar a história.",
+        "avaibleOn": ["disney"],
+        "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
+        "rate": 4,
+        "position": "right"
     }
 ]

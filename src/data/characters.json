@@ -5,15 +5,19 @@
         "description":"Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.",
         "image":"spider-man",
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 3
+        "avaibleOn": ["Disney"],
+        "rate": 3,
+        "position": "left"
     },
     {
         "id": 2,
-        "title": "Wanda",
+        "title": "Wanda Maximoff",
         "description": "Wanda Maximoff foi sequestrada da Sérvia e trazida para a Montanha Wundagore, base do Alto Evolucionário. Durante anos, ela e seu irmão gêmeo, Pietro, acreditavam que eram filhos de um casal de ciganos.",
         "image": "wanda",
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 5
+        "avaibleOn": ["Disney"],
+        "rate": 4,
+        "position": "left"
     },
     {
         "id": 3,
@@ -21,8 +25,9 @@
         "description":"A lua Titã era governada por Mentor (A'Lars), quando então reinava paz e tecnologia. Mentor tinha dois filhos: Eros e Thanos.  Ao contrário do irmão, Thanos, era bem mais poderoso e almejava ainda mais.",
         "image": "thanos",
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 4
-        
+        "rate": 4,
+        "position": "right",
+        "avaibleOn": ["Disney"] 
     },
     {
         "id": 4,
@@ -30,8 +35,9 @@
         "description":"Na história original dos quadrinhos, o Hulk é um selvagem e poderoso alter ego do Dr. Robert Bruce Banner, um cientista que foi atingido por raios gama enquanto salvava um adolescente durante o teste militar.",
         "image":"hulk",
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 2
-
+        "rate": 2,
+        "position": "left",
+        "avaibleOn": ["Disney"]
     },
     {
         "id": 5,
@@ -39,7 +45,9 @@
         "description":"Capitão América foi concebido como um super-herói patriótico que lutou contra as potências do Eixo na Segunda Guerra Mundial[1] e foi personagem mais popular da Timely Comics durante o período da guerra.",
         "image":"captain-america",
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 3  
+        "rate": 3 ,
+        "position": "left",
+        "avaibleOn": ["Disney"]
     },
     {
         "id": 6,
@@ -47,6 +55,8 @@
         "description":"Capitã Carol Danvers, também conhecida como Capitã Marvel, é uma antiga piloto da Força Aérea dos Estados Unidos que, após ser exposta à energia do Tesseract, obteve poderes cósmicos.",
         "image":"captain-marvel",
         "apparitions": ["Vingadores - Era de Ultron", "Capitão América - Guerra Civil", "Vingadores - Guerra Infinita" , "Vingadores - Ultimato", "WandaVision"],
-        "rate": 0
+        "rate": 0,
+        "position": "right",
+        "avaibleOn": ["Disney"] 
     }
 ]
