@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
+import ReactModal from 'react-modal';
 
 import { ICharacters, IHqs, IMovies } from "../../types/DataContext";
 
-import { Title } from "../FormLogin/style";
 import Container from "../../shared/Container";
 import Section from "../../shared/Section";
 
@@ -11,31 +11,47 @@ import starEmptyIcon from "../../assets/star-empty.svg";
 import closeIcon from "../../assets/close.svg";
 
 import { 
-    DetailsCharacters, DetailsMoviesAndHqs, Info, Apparitions, Movies, RateText, Rate, Close, 
+    DetailsCharacters, DetailsMoviesAndHqs, Title, Description, Info, Apparitions, Movies, RateText, Rate, Close, 
     AvaibleOn, AvaiblesStreaming, CloseMovies
 } from "./styles";
 
 const assetsPath = "/images/"
 
 export default function DetailsCard({data, isCharacterData, onClose }: {data: ICharacters | IMovies | IHqs, isCharacterData?: boolean, onClose: VoidFunction } ): ReactElement {
-    console.log("chegou");
+    const customStyles = {
+        content: {
+          
+        },
+      };
+    ReactModal.setAppElement('body');
+      console.log(isCharacterData)
     return (
-        <Section detailsCard={true}>
-            <Container detailsCard={true}>
-                { isCharacterData 
-                ? <CharactersInfo  data={data} />
-                : <MoviesAndHqsInfo  data={data} /> }
-            </Container>
-        </Section>
+        <ReactModal
+            isOpen={true}
+            onRequestClose={onClose}
+            style={customStyles}
+            contentLabel="Example Modal"
+            className="Modal"
+            overlayClassName="Overlay"
+            >
+            <Section detailsCard={true}>
+                <Container>
+                    { isCharacterData 
+                    ? <CharactersInfo  data={data} onClose={onClose} />
+                    : <MoviesAndHqsInfo  data={data} onClose={onClose} /> }
+                </Container>
+            </Section>
+        </ReactModal>
     )
 }
 
-function CharactersInfo({data}: {data: ICharacters | IMovies | IHqs }): ReactElement {
-    const descriptionPosition = data.id - 1 % 3 == NaN ? "right" : "left" ;
+function CharactersInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, onClose: VoidFunction }): ReactElement {
+    const positiveRate = Array.from(Array(data.rate).keys());
+    const negativeRate =Array.from(Array(5 - data.rate).keys());
 
     return (
-        <DetailsCharacters>
-            {descriptionPosition == "right" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
+        <DetailsCharacters float={data.position == "right"}>
+            {data.position == "left" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
             <Info>
                 <Title>
                     {data.title}
@@ -55,56 +71,55 @@ function CharactersInfo({data}: {data: ICharacters | IMovies | IHqs }): ReactEle
                     Avaliações dos Fãs
                 </RateText>
                 <Rate>
-                    {Array(data.rate).map( rate => (
-                        <img src={starFullIcon} alt={data.rate.toString()} />
+                    {positiveRate.map( (rate, index) => (
+                        <img key={index+starFullIcon} src={starFullIcon} alt={data.rate.toString()} />
                     ))}
-                    {Array(5 - data.rate).map( rate => (
-                        <img src={starEmptyIcon} alt={data.rate.toString()} />
+                    {negativeRate.map( (rate, index) => (
+                        <img key={index+starEmptyIcon} src={starEmptyIcon} alt={data.rate.toString()} />
                     ))}
                 </Rate>
-                <Close src={closeIcon} alt="Fechar" />
+                <Close src={closeIcon} alt="Fechar" onClick={onClose} characters={true} />
             </Info>
-            {descriptionPosition == "left" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
+            {data.position == "right" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
         </DetailsCharacters>
     )
 }
 
 
-function MoviesAndHqsInfo({data}: {data: ICharacters | IMovies | IHqs }): ReactElement {
-    const descriptionPosition = data.id - 1 % 3 == NaN ? "right" : "left" ;
-
+function MoviesAndHqsInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, onClose: VoidFunction }): ReactElement {
+    const positiveRate = Array.from(Array(data.rate).keys());
+    const negativeRate =Array.from(Array(5 - data.rate).keys());
+    
     return (
-        <DetailsMoviesAndHqs>
-            {descriptionPosition == "right" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
+        <DetailsMoviesAndHqs float={data.position == "right"}>
+            {data.position == "left" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
             <Info>
                 <Title>
                     {data.title}
                 </Title>
-                <Apparitions>
-                    Aparições:
-                </Apparitions>
-                <Movies>
-                    {data.apparitions.map( (apparition, index, array) =>  (
-                        <>
-                            {apparition}
-                            {array.length - 1 < index && <br />}
-                        </>
-                    ))}
-                </Movies>
+                <Description>
+                    {data.description}
+                </Description>
+                <AvaibleOn>
+                    Disponível para compra:
+                </AvaibleOn>
+                {data.avaibleOn.map((streaming, key) => (
+                    <AvaiblesStreaming key={key} src={`${assetsPath}${streaming}.svg`} alt={streaming} />
+                ))}
                 <RateText>
                     Critica: 
                 </RateText>
                 <Rate>
-                    {Array(data.rate).map( rate => (
-                        <img src={starFullIcon} alt={data.rate.toString()} />
+                    {positiveRate.map( (rate, index) => (
+                        <img key={index+starFullIcon} src={starFullIcon} alt={data.rate.toString()} />
                     ))}
-                    {Array(5 - data.rate).map( rate => (
-                        <img src={starEmptyIcon} alt={data.rate.toString()} />
+                    {negativeRate.map( (rate, index) => (
+                        <img key={index+starEmptyIcon} src={starEmptyIcon} alt={data.rate.toString()} />
                     ))}
                 </Rate>
-                <Close src={closeIcon} alt="Fechar" />
+                <Close src={closeIcon} alt="Fechar" onClick={onClose} />
             </Info>
-            {descriptionPosition == "left" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
+            {data.position == "right" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
         </DetailsMoviesAndHqs>
     )
 }
