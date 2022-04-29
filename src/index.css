@@ -3,7 +3,10 @@
 
   --background-color-nav: #000000;
 
-  --container: 1024px;
+  --container-lg: 1024px;
+  --container-sm: 680px;
+  --container-xs: 420px;
+
 }
 
 @font-face {
@@ -57,7 +60,8 @@ a, a:hover, a:focus, a:active {
 
 ul {
  list-style: none;
- margin: 0; 
+ margin: 0;
+ padding: 0; 
 }
 nav {
   background-color: var(--background-color-nav);
@@ -66,4 +70,17 @@ nav {
 
 h2, h1, p {
   margin: 0;
+}
+
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../public/images/details-card--background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 20;
 }
