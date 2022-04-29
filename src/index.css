@@ -1,0 +1,69 @@
+:root {
+  --background-color-application: #000000;
+
+  --background-color-nav: #000000;
+
+  --container: 1024px;
+}
+
+@font-face {
+  font-family: "Marvel";
+  src: local("Marvel"), url("./assets/fonts/MarvelRegular-Dj83.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Axiform";
+  src: local("Axiform"), url("./assets/fonts/Kastelov\ -\ Axiforma\ Bold.otf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Axiform Light";
+  src: local("Axiform Light"), url("./assets/fonts/Kastelov\ -\ Axiforma\ Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Axiform Thin";
+  src: local("Axiform Thin"), url("./assets/fonts/Kastelov\ -\ Axiforma\ Thin.otf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Axiform Medium";
+  src: local("Axiform Medium"), url("./assets/fonts/Kastelov\ -\ Axiforma\ Medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Axiform Regular";
+  src: local("Axiform Regular"), url("./assets/fonts/Kastelov\ -\ Axiforma\ Regular.otf") format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: var(--background-color-application);
+  background-image: url("../public/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+ul {
+ list-style: none;
+ margin: 0; 
+}
+nav {
+  background-color: var(--background-color-nav);
+  height: 114px;
+}
+
+h2, h1, p {
+  margin: 0;
+}
