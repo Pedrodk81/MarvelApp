@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 
 const Container = styled.div<any>`
-    max-width: var(--container);
+    max-width: var(--container-lg);
     margin: auto;
+    
+    @media (max-width: 720px) {
+        max-width: var(--container-sm);
+    }
+
+    @media (max-width: 460px) {
+        max-width: var(--container-xs);
+    }
 
 `;
 
