@@ -24,7 +24,7 @@ export default function DetailsCard({ data, isCharacterData, onClose }: { data: 
         },
     };
     ReactModal.setAppElement('body');
-    console.log(isCharacterData)
+    
     return (
         <ReactModal
             isOpen={true}

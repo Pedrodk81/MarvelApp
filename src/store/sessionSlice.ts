@@ -24,7 +24,7 @@ export const sessionSlice = createSlice({
         }
     },
     DESTROY_SESSION: (): SessionState => {
-      console.log("initialState", initialState)
+      
         return {
             ...initialState,
         }
