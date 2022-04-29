@@ -2,6 +2,7 @@
   "name": "movies-cards",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://pedrodk81.github.io/MarvelApp/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
@@ -25,7 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +58,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/react-slick": "^0.23.8",
     "@types/redux-thunk": "^2.1.0",
-    "@types/styled-components": "^5.1.25"
+    "@types/styled-components": "^5.1.25",
+    "gh-pages": "^3.2.3"
   }
 }
