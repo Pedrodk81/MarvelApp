@@ -1,16 +1,23 @@
 import styled, {keyframes} from 'styled-components';
 
+const showCards = keyframes`
+0% {
+    opacity: 0;
+    bottom: 20px;
+}
+100% {
+    opacity: 1;
+    bottom: 0;
+}
+`;
+
 const fadeIn = keyframes`
-    0% {
-        opacity: 0;
-        bottom: 20px;
-
-    }
-    100% {
-        opacity: 1;
-        bottom: 0;
-
-    }
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
 `;
 
 export const Cards = styled.div<any>`
@@ -25,7 +32,7 @@ export const Card = styled.div<any>`
     background-repeat: no-repeat;
     background-size: cover;
     display: flex !important;
-    animation: ${fadeIn} 0.5s ease;
+    animation: ${showCards} 0.5s ease;
     cursor: pointer;
     position: relative;
 `;
