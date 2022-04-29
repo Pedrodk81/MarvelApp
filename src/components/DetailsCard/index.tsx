@@ -10,21 +10,21 @@ import starFullIcon from "../../assets/star-full.svg";
 import starEmptyIcon from "../../assets/star-empty.svg";
 import closeIcon from "../../assets/close.svg";
 
-import { 
-    DetailsCharacters, DetailsMoviesAndHqs, Title, Description, Info, Apparitions, Movies, RateText, Rate, Close, 
+import {
+    DetailsCharacters, DetailsMoviesAndHqs, Title, Description, Info, Apparitions, Movies, RateText, Rate, Close,
     AvaibleOn, AvaiblesStreaming
 } from "./styles";
 
 const assetsPath = "/MarvelApp/images/"
 
-export default function DetailsCard({data, isCharacterData, onClose }: {data: ICharacters | IMovies | IHqs, isCharacterData?: boolean, onClose: VoidFunction } ): ReactElement {
+export default function DetailsCard({ data, isCharacterData, onClose }: { data: ICharacters | IMovies | IHqs, isCharacterData?: boolean, onClose: VoidFunction }): ReactElement {
     const customStyles = {
         content: {
-          
+
         },
-      };
+    };
     ReactModal.setAppElement('body');
-      console.log(isCharacterData)
+    console.log(isCharacterData)
     return (
         <ReactModal
             isOpen={true}
@@ -33,21 +33,21 @@ export default function DetailsCard({data, isCharacterData, onClose }: {data: IC
             contentLabel="Example Modal"
             className="Modal"
             overlayClassName="Overlay"
-            >
+        >
             <Section detailsCard={true}>
                 <Container>
-                    { isCharacterData 
-                    ? <CharactersInfo  data={data} onClose={onClose} />
-                    : <MoviesAndHqsInfo  data={data} onClose={onClose} /> }
+                    {isCharacterData
+                        ? <CharactersInfo data={data} onClose={onClose} />
+                        : <MoviesAndHqsInfo data={data} onClose={onClose} />}
                 </Container>
             </Section>
         </ReactModal>
     )
 }
 
-function CharactersInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, onClose: VoidFunction }): ReactElement {
+function CharactersInfo({ data, onClose }: { data: ICharacters | IMovies | IHqs, onClose: VoidFunction }): ReactElement {
     const positiveRate = Array.from(Array(data.rate).keys());
-    const negativeRate =Array.from(Array(5 - data.rate).keys());
+    const negativeRate = Array.from(Array(5 - data.rate).keys());
 
     return (
         <DetailsCharacters float={data.position === "right"}>
@@ -60,10 +60,12 @@ function CharactersInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, on
                     Aparições:
                 </Apparitions>
                 <Movies>
-                    {data.apparitions.map( (apparition, index, array) =>  (
+                    {data.apparitions.map((apparition, index, array) => (
                         <>
-                            {apparition}
-                            {array.length - 1 < index && <br />}
+                            <p>
+                                {apparition}
+                            </p>
+
                         </>
                     ))}
                 </Movies>
@@ -71,11 +73,11 @@ function CharactersInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, on
                     Avaliações dos Fãs
                 </RateText>
                 <Rate>
-                    {positiveRate.map( (rate, index) => (
-                        <img key={index+starFullIcon} src={starFullIcon} alt={data.rate.toString()} />
+                    {positiveRate.map((rate, index) => (
+                        <img key={index + starFullIcon} src={starFullIcon} alt={data.rate.toString()} />
                     ))}
-                    {negativeRate.map( (rate, index) => (
-                        <img key={index+starEmptyIcon} src={starEmptyIcon} alt={data.rate.toString()} />
+                    {negativeRate.map((rate, index) => (
+                        <img key={index + starEmptyIcon} src={starEmptyIcon} alt={data.rate.toString()} />
                     ))}
                 </Rate>
                 <Close src={closeIcon} alt="Fechar" onClick={onClose} characters={true} />
@@ -86,10 +88,10 @@ function CharactersInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, on
 }
 
 
-function MoviesAndHqsInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, onClose: VoidFunction }): ReactElement {
+function MoviesAndHqsInfo({ data, onClose }: { data: ICharacters | IMovies | IHqs, onClose: VoidFunction }): ReactElement {
     const positiveRate = Array.from(Array(data.rate).keys());
-    const negativeRate =Array.from(Array(5 - data.rate).keys());
-    
+    const negativeRate = Array.from(Array(5 - data.rate).keys());
+
     return (
         <DetailsMoviesAndHqs float={data.position === "right"}>
             {data.position === "left" && <img src={`${assetsPath}${data.image}.png`} alt={data.title} />}
@@ -107,14 +109,14 @@ function MoviesAndHqsInfo({data, onClose}: {data: ICharacters | IMovies | IHqs, 
                     <AvaiblesStreaming key={key} src={`${assetsPath}${streaming}.svg`} alt={streaming} />
                 ))}
                 <RateText>
-                    Critica: 
+                    Critica:
                 </RateText>
                 <Rate>
-                    {positiveRate.map( (rate, index) => (
-                        <img key={index+starFullIcon} src={starFullIcon} alt={data.rate.toString()} />
+                    {positiveRate.map((rate, index) => (
+                        <img key={index + starFullIcon} src={starFullIcon} alt={data.rate.toString()} />
                     ))}
-                    {negativeRate.map( (rate, index) => (
-                        <img key={index+starEmptyIcon} src={starEmptyIcon} alt={data.rate.toString()} />
+                    {negativeRate.map((rate, index) => (
+                        <img key={index + starEmptyIcon} src={starEmptyIcon} alt={data.rate.toString()} />
                     ))}
                 </Rate>
                 <Close src={closeIcon} alt="Fechar" onClick={onClose} />
