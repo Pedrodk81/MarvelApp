@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MarvelApp/static/css/main.2d512fce.css",
-    "main.js": "/MarvelApp/static/js/main.9d69e255.js",
+    "main.js": "/MarvelApp/static/js/main.5d45c5d6.js",
     "static/js/787.775fa90d.chunk.js": "/MarvelApp/static/js/787.775fa90d.chunk.js",
     "static/media/background.png": "/MarvelApp/static/media/background.566e783a31c05ed1e925.png",
     "static/media/avatar.svg": "/MarvelApp/static/media/avatar.350314c8ebdec7a4d289ece627e95e7a.svg",
@@ -24,11 +24,11 @@
     "static/media/star-empty.svg": "/MarvelApp/static/media/star-empty.57b4eec659f2d594035c2fa02ff1edd8.svg",
     "static/media/star-full.svg": "/MarvelApp/static/media/star-full.51a572f7dd851226118f15a9038d669e.svg",
     "main.2d512fce.css.map": "/MarvelApp/static/css/main.2d512fce.css.map",
-    "main.9d69e255.js.map": "/MarvelApp/static/js/main.9d69e255.js.map",
+    "main.5d45c5d6.js.map": "/MarvelApp/static/js/main.5d45c5d6.js.map",
     "787.775fa90d.chunk.js.map": "/MarvelApp/static/js/787.775fa90d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d512fce.css",
-    "static/js/main.9d69e255.js"
+    "static/js/main.5d45c5d6.js"
   ]
 }
