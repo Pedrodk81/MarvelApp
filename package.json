@@ -2,6 +2,7 @@
   "name": "movies-cards",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://pedrodk81.github.io/MarvelApp/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
