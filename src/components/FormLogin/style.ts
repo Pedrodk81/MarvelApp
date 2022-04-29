@@ -99,7 +99,7 @@ export const NoAccount = styled.p`
     color: #84848D; 
     align-self: center;
 
-    a {
+    span {
         color: #FF0000;  
     }
 `;
