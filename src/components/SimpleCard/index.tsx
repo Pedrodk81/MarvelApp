@@ -13,9 +13,10 @@ import Container from "../../shared/Container";
 import nextArrowIcon from "../../assets/next-arrow.svg";
 import prevArrowIcon from "../../assets/prev-arrow.svg";
 
-const assetsPath = "/images/"
+const assetsPath = "/MarvelApp/images/"
 
 const defaultValues: ICharacters | IMovies | IHqs = {
+
     id: 1,
     title: "null",
     description: "null",
