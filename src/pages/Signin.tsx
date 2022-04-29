@@ -6,12 +6,19 @@ import FormLogin from "../components/FormLogin";
 
 export default function Signin(): ReactElement {
     return (
-        <Login>
-            <Logo />
-            <FormLogin />
-        </Login>
+        <Wrapper>
+            <Login>
+                <Logo />
+                <FormLogin />
+            </Login>
+        </Wrapper>
     )
 }
+
+const Wrapper = styled.div`
+    display: flex;
+    height: 100vh;
+` ;
 
 const Login = styled.div`
     display: flex;
@@ -19,10 +26,9 @@ const Login = styled.div`
     width: fit-content;
     height: 100vh;
     margin-left: 154px;
-    margin-top: 8%;
+    justify-content: center;
 
     @media (max-width: 460px) {
-        padding: 60px 15px;
-        margin: 0;
+        margin-left: 0;
     }
 ` ;
