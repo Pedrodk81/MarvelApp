@@ -90,7 +90,7 @@ export const Close = styled.img<any>`
     position: relative;
     left: 90%;
     bottom: ${(p: any) => p.characters ? null : "5%"};
-    top: ${(p: any) => p.characters ? "15%" : null};
+    top: ${(p: any) => p.characters ? "8%" : null};
     `
 
 export const DescriptionMovies = styled.div`
