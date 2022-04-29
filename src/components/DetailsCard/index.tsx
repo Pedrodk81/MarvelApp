@@ -15,7 +15,7 @@ import {
     AvaibleOn, AvaiblesStreaming
 } from "./styles";
 
-const assetsPath = "/images/"
+const assetsPath = "/MarvelApp/images/"
 
 export default function DetailsCard({data, isCharacterData, onClose }: {data: ICharacters | IMovies | IHqs, isCharacterData?: boolean, onClose: VoidFunction } ): ReactElement {
     const customStyles = {
