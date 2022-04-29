@@ -26,7 +26,7 @@ export default function FormLogin(): ReactElement {
     return (
         <Box>
             <Title>Bem vindo(a) de volta!</Title>
-            <AccessAccount>Acesso sua conta:</AccessAccount>
+            <AccessAccount>Acesse sua conta:</AccessAccount>
             <Form onSubmit={onSubmit}>
                 <label htmlFor="email">
                     <InputEmail 
@@ -61,13 +61,13 @@ export default function FormLogin(): ReactElement {
                         <label htmlFor="saveLogin">
                             <input type="checkbox" name="saveLogin" />
                         </label>
-                        <span>Savar login</span>
+                        <span>Salvar login</span>
                     </div>
                     <span className="forgot-password">Esquecia a senha</span>
                 </FormOptions>
                 <ButtonSubmit type="submit">Entrar</ButtonSubmit>
             </Form>
-            <NoAccount> Ainda nao tem o login? <span className="signup">Cadastre-se</span></NoAccount>
+            <NoAccount> Ainda não tem o login? <span className="signup">Cadastre-se</span></NoAccount>
         </Box>
     )
 }
