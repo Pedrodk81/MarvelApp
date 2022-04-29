@@ -79,7 +79,7 @@ export const Button = styled.button`
 
     &.next-arrow {
         bottom: 255px;
-        left: 1000px;
+        left: 980px;
     }
 
 `;
