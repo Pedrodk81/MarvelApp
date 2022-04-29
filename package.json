@@ -2,7 +2,6 @@
   "name": "movies-cards",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pedrodk81.github.io/MarvelApp/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
@@ -11,6 +10,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-hook-form": "^7.30.0",
+    "react-modal": "^3.15.1",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
@@ -25,10 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -53,11 +50,11 @@
     "@types/node": "^16.11.27",
     "@types/react": "^18.0.6",
     "@types/react-dom": "^18.0.2",
+    "@types/react-modal": "^3.13.1",
     "@types/react-redux": "^7.1.24",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-slick": "^0.23.8",
     "@types/redux-thunk": "^2.1.0",
-    "@types/styled-components": "^5.1.25",
-    "gh-pages": "^3.2.3"
+    "@types/styled-components": "^5.1.25"
   }
 }
